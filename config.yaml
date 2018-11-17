@@ -1,0 +1,17 @@
+# set name of your service
+name: pipedrive
+
+# default paramenters
+env: {{ ENV }}
+listen: "{{ HOST|default('0.0.0.0')}}:{{PORT|default(8080) }}"
+redis_dsn: "{{ REDIS_DSN|default('redis://redis:6379') }}"
+ch_dsn: "{{ CHP_DSN|default('http://default:default@host:9090') }}"
+
+api_token: {{API_TOKEN}}
+projectIdKey: {{WH_KEY}}
+
+endpoint: 'https://digitalgod.pipedrive.com/v1/'
+dealf_ep: 'https://digitalgod.pipedrive.com/v1/dealFields'
+filters_ep: 'https://digitalgod.pipedrive.com/v1/filters'
+personf_ep: 'https://digitalgod.pipedrive.com/v1/personFields'
+persons_ep: 'https://digitalgod.pipedrive.com/v1/persons'
